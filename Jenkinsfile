@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	tools {
 		maven 'Maven'
-		jdk 'JDK'
+		jdk 'jdk'
 	}
 	stages {
 		stage('Checkout') {
@@ -23,7 +23,7 @@ pipeline {
 		stage('Run Application') {
 			steps {
 // Start the JAR application
-			sh 'java -jar target/Mmaven-app-one-1.0-SNAPSHOT.jar'
+			sh 'java -jar target/maven-app-one-1.0-SNAPSHOT.jar'
 			}
 		}
 	}
