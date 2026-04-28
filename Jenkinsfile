@@ -5,11 +5,6 @@ pipeline {
 		jdk 'jdk'
 	}
 	stages {
-		stage('Checkout') {
-			steps {
-				git branch: ‘master’, url: 'https://github.com/Shraddhacs2005/maven-app-one'
-			}
-		}
 		stage('Build') {
 			steps {
 				sh 'mvn clean package'
